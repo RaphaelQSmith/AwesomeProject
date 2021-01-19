@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>React Native is AWESOME</Text>
+      <Text>Consulte a Cotação das principais Criptomoedas</Text>
+      <Button 
+      title="Consultar" />
       <StatusBar style="auto" />
     </View>
   );
