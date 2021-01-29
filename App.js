@@ -7,7 +7,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Consulte a Cotação das principais Criptomoedas</Text>
       <Button 
-      title="Consultar" />
+      title="Consultar" style={styles.myBt}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,8 +16,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#dca',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  myBt: {
+    flex: 1,
+    color: 'black'
+
+  }
 });
