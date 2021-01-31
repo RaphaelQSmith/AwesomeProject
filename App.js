@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   myBt: {
-    flex: 1,
+    flex: 1, 
     color: 'black'
 
   }
