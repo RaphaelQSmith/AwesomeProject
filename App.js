@@ -8,6 +8,9 @@ export default function App() {
       <Text>Consulte a Cotação das principais Criptomoedas</Text>
       <Button 
       title="Consultar" style={styles.myBt}/>
+      <Text>Cotação do Bitcoin hoje</Text>
+      <Text>Cotação do Ethereum hoje</Text>
+      <Text>Cotação do Dogecoin hoje</Text>
       <StatusBar style="auto" />
     </View>
   );
