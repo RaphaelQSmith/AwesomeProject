@@ -6,14 +6,14 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Consulte a Cotação das principais Criptomoedas</Text>
-      <Text style={styles.title}>Cotação do Bitcoin hoje</Text>
+      <Text style={styles.title}>Principais Criptomoedas</Text>
+      <Text style={styles.title}>Cotação do Bitcoin</Text>
       <Button 
       title="Consultar" style={styles.title} />
-      <Text style={styles.title}>Cotação do Ethereum hoje</Text>
+      <Text style={styles.title}>Cotação do Ethereum</Text>
       <Button 
       title="Consultar" style={styles.myBt} />
-      <Text style={styles.title}>Cotação do Dogecoin hoje</Text>
+      <Text style={styles.title}>Cotação do Dogecoin</Text>
       <Button 
       style={styles.myBt}
       title="Consultar" />
@@ -34,10 +34,9 @@ const styles = StyleSheet.create({
   title: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 16
+    fontSize: 18
   },
   myBt:{
 
   }
- 
 });
