@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, TouchableHighlightComponent, View } from 'react-native';
+import { Alert, Button, StyleSheet, Text, TouchableHighlightComponent, View } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export default function App() {
@@ -9,19 +9,37 @@ export default function App() {
       <Text style={styles.title}>Principais Criptomoedas</Text>
       <Text style={styles.title}>Cotação do Bitcoin</Text>
       <Button 
-      title="Consultar" style={styles.title} />
+      title="Consultar" 
+      onPress={() => Alert.alert('This is Bitcoin')}
+      style={styles.title} />
       <Text style={styles.title}>Cotação do Ethereum</Text>
       <Button 
-      title="Consultar" style={styles.myBt} />
+      title="Consultar"
+      onPress={() => Alert.alert('This is Ethereum')}
+      style={styles.myBt} />
       <Text style={styles.title}>Cotação do Dogecoin</Text>
       <Button 
+      title="Consultar"
+      onPress={() => Alert.alert('This is Dogecoin')}
       style={styles.myBt}
-      title="Consultar" />
-      
+      />
       <StatusBar style="auto" />
     </View>
-  );
+  ); 
 }
+
+// To be added later
+// function chosenCoin(coin) {
+//   if(coin=='bit'){
+//     Alert.alert('Bitcoin!')
+//   }
+//   else if(coin=='ether'){
+//     Alert.alert('Ethereum!')
+//   }
+//   else if(coin=='doge'){
+//     Alert.alert('Dogecoin!')
+//   }
+// }
 
 const styles = StyleSheet.create({
   container: {
