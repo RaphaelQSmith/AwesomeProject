@@ -11,17 +11,17 @@ export default function App() {
       <Button 
       title="Consultar" 
       onPress={() => Alert.alert('This is Bitcoin')}
-      style={styles.title} />
+      color="#841584" />
       <Text style={styles.title}>Cotação do Ethereum</Text>
       <Button 
       title="Consultar"
       onPress={() => Alert.alert('This is Ethereum')}
-      style={styles.myBt} />
+      color="#841584" />
       <Text style={styles.title}>Cotação do Dogecoin</Text>
       <Button 
       title="Consultar"
       onPress={() => Alert.alert('This is Dogecoin')}
-      style={styles.myBt}
+      color="#841584"
       />
       <StatusBar style="auto" />
     </View>
@@ -44,7 +44,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#222222',
+    backgroundColor: '#20232A',
     alignItems: 'center',
     justifyContent: 'space-around',
     marginTop: 22
@@ -55,6 +55,6 @@ const styles = StyleSheet.create({
     fontSize: 18
   },
   myBt:{
-
+    color: "#111"
   }
 });
