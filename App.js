@@ -28,18 +28,6 @@ export default function App() {
   ); 
 }
 
-// To be added later
-// function chosenCoin(coin) {
-//   if(coin=='bit'){
-//     Alert.alert('Bitcoin!')
-//   }
-//   else if(coin=='ether'){
-//     Alert.alert('Ethereum!')
-//   }
-//   else if(coin=='doge'){
-//     Alert.alert('Dogecoin!')
-//   }
-// }
 
 const styles = StyleSheet.create({
   container: {
@@ -54,7 +42,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18
   },
-  myBt:{
+  footer:{
     color: "#111"
+  },
+  sidebar:{
+
   }
 });
