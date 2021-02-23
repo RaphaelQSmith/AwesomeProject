@@ -28,6 +28,15 @@ export default function App() {
   ); 
 }
 
+// make get request to Bitcoin API 
+const getFromApi = () => {
+  return fetch('/', {
+    method: 'GET',
+    body: JSON.stringify({
+      //select relevant values here
+    })
+});
+}
 
 const styles = StyleSheet.create({
   container: {
