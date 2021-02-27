@@ -28,6 +28,7 @@ export default function App() {
   ); 
 }
 
+
 // make get request to Bitcoin API 
 const getFromApi = () => {
   return fetch('/', {
