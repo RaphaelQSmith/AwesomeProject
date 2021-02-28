@@ -10,7 +10,7 @@ export default function App() {
       <Text style={styles.title}>Cotação do Bitcoin</Text>
       <Button 
       title="Consultar" 
-      onPress={() => Alert.alert('This is Bitcoin')}
+      onPress={() =>Alert.alert(getFromApi.time)}
       color="#841584" />
       <Text style={styles.title}>Cotação do Ethereum</Text>
       <Button 
@@ -20,7 +20,7 @@ export default function App() {
       <Text style={styles.title}>Cotação do Dogecoin</Text>
       <Button 
       title="Consultar"
-      onPress={() => Alert.alert('This is Dogecoin')}
+      onPress={() => Alert.alert('This is Doge Doge')}
       color="#841584"
       />
       <StatusBar style="auto" />
@@ -31,11 +31,10 @@ export default function App() {
 
 // make get request to Bitcoin API 
 const getFromApi = () => {
-  return fetch('/', {
-    method: 'GET',
-    body: JSON.stringify({
-      //select relevant values here
-    })
+  fetch('https://api.coindesk.com/v1/bpi/currentprice.json').then((response) => response.json()).then((json) => {
+    return data.time;
+}).catch((error) => {
+    console.error(error);
 });
 }
 
