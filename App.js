@@ -1,28 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Alert, Button, StyleSheet, Text, TouchableHighlightComponent, View } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { StyleSheet, Text, View } from 'react-native';
+import Game from './components/Game';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Principais Criptomoedas</Text>
       <Text style={styles.title}>Cotação do Bitcoin</Text>
-      <Button 
-      title="Consultar" 
-      onPress={() =>Alert.alert(getFromApi.time)}
-      color="#841584" />
-      <Text style={styles.title}>Cotação do Ethereum</Text>
-      <Button 
-      title="Consultar"
-      onPress={() => Alert.alert('This is Ethereum')}
-      color="#841584" />
-      <Text style={styles.title}>Cotação do Dogecoin</Text>
-      <Button 
-      title="Consultar"
-      onPress={() => Alert.alert('This is Doge Doge')}
-      color="#841584"
-      />
+      <Game />
       <StatusBar style="auto" />
     </View>
   ); 
