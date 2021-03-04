@@ -5,10 +5,10 @@ import Game from './components/Game';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Principais Criptomoedas</Text>
-      <Text style={styles.title}>Cotação do Bitcoin</Text>
-      <Game />
+    <View>
+      {/* <Text style={styles.title}>Principais Criptomoedas</Text>
+      <Text style={styles.title}>Cotação do Bitcoin</Text> */}
+      <Game randomNumberCount={6} />
       <StatusBar style="auto" />
     </View>
   ); 
@@ -24,23 +24,3 @@ const getFromApi = () => {
 });
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#20232A',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    marginTop: 22
-  },
-  title: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 18
-  },
-  footer:{
-    color: "#111"
-  },
-  sidebar:{
-
-  }
-});
