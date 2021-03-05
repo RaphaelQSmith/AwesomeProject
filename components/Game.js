@@ -4,17 +4,22 @@ import PropTypes from 'prop-types'
 
 class Game extends Component {
     static propTypes = {
-        randomNumberCount: PropTypes.string.isRequired,
+        randomNumberCount: PropTypes.number.isRequired,
     }
-    ranNum = 3 + Math.floor(5 * Math.random())
-    randomNumbers = Array.from({ length:this.props.randomNumberCount })
-                         .maps(() => 1+ Math.floor))
-        render() {
+    // target = 3 + Math.floor(5 * Math.random())
+    randomNumbers = Array
+        .from({ length: this.props.randomNumberCount })
+        .map(() => 1+ Math.floor(10* Math.random()))
+    target = this.randomNumbers
+        .slice(0, this.props.randomNumberCount - 2)
+        .reduce((acc, curr) => acc + curr, 0)
+    render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.target}>{this.ranNum}</Text>
-                <Text>{this.props.randomNumberCount}</Text>
-
+                <Text style={styles.target}>{this.target}</Text>
+                {this.randomNumbers.map((randomNumber, index) =>
+                    <Text key={index}>{randomNumber}</Text>
+                )}
             </View>
         )
     }
