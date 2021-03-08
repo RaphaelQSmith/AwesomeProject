@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Alert, StyleSheet, Button, View, Text } from 'react-native'
 import PropTypes from 'prop-types'
+import RandomNumber from './RanNum'
 
 class Game extends Component {
     static propTypes = {
@@ -9,7 +10,7 @@ class Game extends Component {
     // target = 3 + Math.floor(5 * Math.random())
     randomNumbers = Array
         .from({ length: this.props.randomNumberCount })
-        .map(() => 1+ Math.floor(10* Math.random()))
+        .map(() => 1+ Math.floor(8 * Math.random()))
     target = this.randomNumbers
         .slice(0, this.props.randomNumberCount - 2)
         .reduce((acc, curr) => acc + curr, 0)
@@ -17,9 +18,11 @@ class Game extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.target}>{this.target}</Text>
-                {this.randomNumbers.map((randomNumber, index) =>
-                    <Text key={index}>{randomNumber}</Text>
-                )}
+                <View style={styles.numContainer}>
+                    {this.randomNumbers.map((randomNumber, index) =>
+                        <RandomNumber key={index} number={randomNumber} />
+                    )}
+                </View>
             </View>
         )
     }
@@ -37,7 +40,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#aaa',
         marginHorizontal: 50,
         textAlign: 'center'
-    }
+    },
+    numContainer:{
+        flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap', 
+        margin: '15%',
+        justifyContent: 'space-around'
+    },
 })
 
 export default Game;
