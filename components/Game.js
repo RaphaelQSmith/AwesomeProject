@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 30,
     },
-
     target: {
         fontSize: 40,
         backgroundColor: '#aaa',
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap', 
         margin: '15%',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
     },
 })
 

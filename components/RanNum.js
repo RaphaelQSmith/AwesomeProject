@@ -11,8 +11,8 @@ export class RanNum extends React.Component {
     }
     render() {
         return (
-            <TouchableOpacity style={styles.eachBox} onPress={this.handlePress} >
-                <Text >{this.props.number}</Text>
+            <TouchableOpacity onPress={this.handlePress}>
+                <Text style={styles.eachBox}>{this.props.number}</Text>
             </TouchableOpacity>    
         )
     }
@@ -22,11 +22,11 @@ const styles = StyleSheet.create({
     eachBox: {
         backgroundColor: '#ddd',
         width: 100,
-        marginHorizontal: 8,
-        marginVertical:30,
+        marginHorizontal: 15,
+        marginVertical: 30,
         textAlign: 'center',
         fontSize: 35
-    },
+    }
 })
 
 export default RanNum
