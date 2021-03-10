@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { Alert, StyleSheet, Button, View, Text } from 'react-native'
+import React from 'react'
+import { StyleSheet, View, Text } from 'react-native'
 import PropTypes from 'prop-types'
 import RandomNumber from './RanNum'
 
-class Game extends Component {
+class Game extends React.Component {
     static propTypes = {
         randomNumberCount: PropTypes.number.isRequired,
     }

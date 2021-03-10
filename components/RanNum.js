@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Text, TouchableOpacity, StyleSheet } from 'react-native'
 
-export class RanNum extends React.Component {
+class RanNum extends React.Component {
     static propTypes = {
         number: PropTypes.number.isRequired,
     }
